@@ -1,15 +1,20 @@
 package GameOfLife;
 
+import javax.inject.Inject;
 import java.util.BitSet;
 
-public class WrappedBoard extends Board {
+public class WrappedBoard extends StandardBoard {
+
+    @Inject
+    public WrappedBoard(int width, int height, CellLivingRule livingRule, BitSet cells) {
+        super(width, height, livingRule, cells);
+    }
+
+    /*
     public WrappedBoard(int width, int height, CellLivingRule livingRule) {
         super(width, height, livingRule);
     }
-
-    public WrappedBoard(Board other) {
-        super(other);
-    }
+    */
 
     @Override
     public boolean[] getNeighbors(int w, int h) {
@@ -33,7 +38,7 @@ public class WrappedBoard extends Board {
 
     @Override
     public WrappedBoard clone() {
-        return new WrappedBoard(this);
+        return new WrappedBoard(width, height, livingCheck, (BitSet)cells.clone());
     }
 
     @Override

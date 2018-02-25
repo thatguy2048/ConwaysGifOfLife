@@ -5,6 +5,7 @@ import GameOfLife.BoardUtils;
 
 import java.io.IOException;
 
+//Adapter for GifSequenceWriter to BoardWriter
 public class BoardGifWriter implements BoardWriter {
     com.aaronco.GifSequenceWriter gifWriter;
 

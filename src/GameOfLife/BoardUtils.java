@@ -3,6 +3,7 @@ package GameOfLife;
 import com.aaronco.GifSequenceWriter;
 import com.company.BoardGifWriter;
 import com.company.BoardWriter;
+import com.company.StartingParameterValues;
 
 import javax.imageio.stream.FileImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
@@ -41,8 +42,10 @@ public class BoardUtils {
     }
 
     public static BufferedImage boardToImage(final Board board){
-        BufferedImage output = new BufferedImage(board.getWidth(), board.getHeight(), BufferedImage.TYPE_USHORT_555_RGB);
-        return drawBoard(board, output);
+        return drawBoard(
+                board,
+                new BufferedImage(board.getWidth(), board.getHeight(), BufferedImage.TYPE_USHORT_555_RGB)
+        );
     }
 
     public static Board outputBoardRun(BoardWriter outWriter, Board initialBoard, int numberOfRuns) throws IOException{
