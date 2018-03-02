@@ -3,6 +3,9 @@ package GameOfLife;
 import javax.inject.Inject;
 import java.util.BitSet;
 
+/**
+ * The standard implementation of the Conway's game of life board.
+ */
 public class StandardBoard implements Board{
     protected BitSet cells;
     protected int width;

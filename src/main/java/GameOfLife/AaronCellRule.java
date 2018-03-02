@@ -1,5 +1,8 @@
 package GameOfLife;
 
+/**
+ * Specialized cell living rule which determines if a cell should be alive if it has less than six alive neighbors and three neighbors in a row which are alive.
+ */
 public class AaronCellRule implements CellLivingRule {
     @Override
     public boolean aliveNextRound(Board board, int cellx, int celly) {

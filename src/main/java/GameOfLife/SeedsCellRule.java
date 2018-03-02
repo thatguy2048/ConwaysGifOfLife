@@ -1,5 +1,9 @@
 package GameOfLife;
 
+/**
+ * The seed cell living rules.
+ * The cell is alive if there at least a number of cells alive around it.
+ */
 public class SeedsCellRule implements CellLivingRule {
     int livingCount;
 

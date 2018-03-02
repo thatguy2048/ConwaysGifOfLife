@@ -3,6 +3,9 @@ package GameOfLife;
 import javax.inject.Inject;
 import java.util.BitSet;
 
+/**
+ * A game board whose edges wrap around so that the far sides are next to one another.
+ */
 public class WrappedBoard extends StandardBoard {
 
     public WrappedBoard(int width, int height, CellLivingRule livingRule) {

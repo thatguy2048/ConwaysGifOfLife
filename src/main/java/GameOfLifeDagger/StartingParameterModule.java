@@ -4,11 +4,15 @@ import com.company.StartingParameterValues;
 import dagger.Module;
 import dagger.Provides;
 
+import javax.inject.Singleton;
 import java.util.BitSet;
 
+/**
+ * Generates the starting parameters.
+ */
 @Module
 public class StartingParameterModule {
-    @Provides
+    @Provides @Singleton
     StartingParameterValues provideStartingParameters(){
         StartingParameterValues output = new StartingParameterValues();
         output.width = 256;

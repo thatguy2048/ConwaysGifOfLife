@@ -1,4 +1,4 @@
-package com.aaronco;//
+package com.company;//
 //  GifSequenceWriter.java
 //  
 //  Created by Elliot Kroo on 2009-04-25.

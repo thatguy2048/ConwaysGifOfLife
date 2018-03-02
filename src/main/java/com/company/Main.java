@@ -4,14 +4,9 @@ import GameOfLife.Board;
 import GameOfLife.BoardUtils;
 import GameOfLife.ConwaysCellRules;
 import GameOfLife.WrappedBoard;
-import com.aaronco.GifSequenceWriter;
 
-import javax.imageio.stream.FileImageOutputStream;
-import javax.imageio.stream.ImageOutputStream;
-import java.awt.image.BufferedImage;
-import java.io.File;
+
 import java.io.IOException;
-import java.util.BitSet;
 import java.util.Scanner;
 
 

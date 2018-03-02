@@ -2,6 +2,9 @@ package com.company;
 
 import java.util.BitSet;
 
+/**
+ * A container for the string representation of the starting parameter values.
+ */
 class StartingParameterStrings{
     String size;
     String numberOfRuns;
@@ -21,6 +24,9 @@ class StartingParameterStrings{
     }
 };
 
+/**
+ * A container for the starting parameters used to run a board and output a GIF file.
+ */
 public class StartingParameterValues{
     public int width;
     public int height;

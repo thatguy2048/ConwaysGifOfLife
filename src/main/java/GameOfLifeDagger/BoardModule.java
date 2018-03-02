@@ -6,6 +6,9 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * Generates an instance of the game board.
+ */
 @Module
 public class BoardModule {
     @Provides

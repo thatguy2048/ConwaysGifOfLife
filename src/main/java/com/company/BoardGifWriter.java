@@ -6,13 +6,15 @@ import GameOfLife.BoardUtils;
 import javax.inject.Inject;
 import java.io.IOException;
 
-//Adapter for GifSequenceWriter to BoardWriter
+/**
+ * Utilizes a GifSequenceWriter to output a game board to a GIF
+ */
 public class BoardGifWriter implements BoardWriter {
     @Inject
-    com.aaronco.GifSequenceWriter gifWriter;
+    com.company.GifSequenceWriter gifWriter;
 
     @Inject
-    public BoardGifWriter(com.aaronco.GifSequenceWriter gifWriter){
+    public BoardGifWriter(com.company.GifSequenceWriter gifWriter){
         this.gifWriter = gifWriter;
     }
 

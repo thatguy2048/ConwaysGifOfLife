@@ -1,6 +1,7 @@
 package GameOfLifeDagger;
 
 import com.company.BoardGifWriter;
+import com.company.BoardPrintWriter;
 import com.company.BoardWriter;
 import com.company.StartingParameterValues;
 import dagger.Module;
@@ -11,13 +12,16 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Generates an instance of a BoardWriter, which may be BoardWriterException if an IOException is thrown during the BoardWriter's construction.
+ */
 @Module
 public class BoardWriterModule {
     @Provides
     BoardWriter provideWriter(StartingParameterValues params){
         try {
             return new BoardGifWriter(
-                    new com.aaronco.GifSequenceWriter(
+                    new com.company.GifSequenceWriter(
                             new FileImageOutputStream(
                                     new File(params.outputFilename)
                             ),
@@ -25,7 +29,7 @@ public class BoardWriterModule {
                     )
             );
         }catch (IOException ioe){
-            return null;
+            return new BoardWriterException(ioe);
         }
     }
 }
